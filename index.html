@@ -23,7 +23,6 @@
  </form> 
  
  <script> 
-  // JavaScript code to fetch and display tasks 
   async function fetchTasks() { 
    const response = await fetch("/get-tasks"); 
    const tasks = await response.json(); 
@@ -39,7 +38,7 @@
    }); 
   } 
  
-  // JavaScript code to add a new task 
+
   async function addTask() { 
    const title = document.getElementById("title").value; 
  
@@ -63,7 +62,6 @@
    } 
   } 
  
-  // Fetch tasks when the page loads 
   fetchTasks(); 
  </script> 
 </body> 
