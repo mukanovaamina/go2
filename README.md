@@ -17,11 +17,14 @@ This project is meticulously tailored for a diverse audience, providing a user-f
 
 # Project Details:
 
-## Crafted by the Visionaries: 
+## Crafted by: 
 *Aruzhan Yeleukeshova* and *Amina Mukanova* from *SE-2215* infused their collaborative brilliance into the very fabric of this project, blending creativity with technical prowess.
 
 
+скриншот первой стр 
 
+
+а здесь инструкция по запуску
 
 
 
