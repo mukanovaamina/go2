@@ -10,7 +10,6 @@ import (
 	_ "github.com/lib/pq"
 )
 
-// Task структура представляет задачу
 type Task struct {
 	ID        int
 	Title     string
@@ -20,7 +19,6 @@ type Task struct {
 var db *sql.DB
 
 func init() {
-	// Замените параметры подключения вашей базы данных PostgreSQL
 	connStr := "user=postgres password=Aruzhan7 dbname=amina sslmode=disable"
 
 	var err error
@@ -39,14 +37,13 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	// Получаем список задач из базы данных
 	tasks, err := getTasks()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	// Загружаем HTML-шаблон и передаем список задач
+
 	tmpl, err := template.New("index").Parse(`
 		<!DOCTYPE html>
 		<html>
@@ -79,16 +76,15 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Отправляем HTML-страницу с задачами в ответе
 	tmpl.Execute(w, tasks)
 }
 
 func addTaskHandler(w http.ResponseWriter, r *http.Request) {
-	// Обработка добавления задачи
+
 	if r.Method == http.MethodPost {
 		title := r.FormValue("title")
 
-		// Добавляем задачу в базу данных
+		
 		err := addTask(title)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -96,7 +92,7 @@ func addTaskHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Перенаправляем пользователя обратно на главную страницу
+	
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
