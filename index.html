@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+ <title>To-Do List</title> 
+ <style> 
+  .task { 
+   color: green; 
+   margin-bottom: 10px; 
+  } 
+ </style> 
+</head> 
+ 
+<body> 
+ <h1>To-Do List</h1> 
+ <ul id="taskList"> 
+  <!-- Tasks will be dynamically added here using JavaScript --> 
+ </ul> 
+ <form id="addTaskForm"> 
+  <label for="title">New Task:</label> 
+  <input type="text" id="title" name="title" required> 
+  <button type="button" onclick="addTask()">Add Task</button> 
+ </form> 
+ 
+ <script> 
+  // JavaScript code to fetch and display tasks 
+  async function fetchTasks() { 
+   const response = await fetch("/get-tasks"); 
+   const tasks = await response.json(); 
+   const taskList = document.getElementById("taskList"); 
+ 
+   taskList.innerHTML = ""; // Clear the existing list 
+ 
+   tasks.forEach(task => { 
+    const li = document.createElement("li"); 
+    li.className = "task"; 
+    li.textContent = task.title; 
+    taskList.appendChild(li); 
+   }); 
+  } 
+ 
+  // JavaScript code to add a new task 
+  async function addTask() { 
+   const title = document.getElementById("title").value; 
+ 
+   const response = await fetch("/create-task", { 
+    method: "POST", 
+    headers: { 
+     "Content-Type": "application/json", 
+    }, 
+    body: JSON.stringify({ 
+     title: title, 
+    }), 
+   }); 
+ 
+   if (response.status === 201) { 
+    // Task created successfully, refresh the task list 
+    fetchTasks(); 
+   } else { 
+    // Display an error message 
+    const error = await response.json(); 
+    alert(`Error: ${error.message}`); 
+   } 
+  } 
+ 
+  // Fetch tasks when the page loads 
+  fetchTasks(); 
+ </script> 
+</body> 
+ 
+</html>
