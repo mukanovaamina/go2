@@ -34,7 +34,7 @@ This project is meticulously tailored for a diverse audience, providing a user-f
 
    http://go-database-sql.org/
    
-   https://edwinsiby.medium.com/performing-crud-operations-in-postgresql-with-go-42657761)
+   https://edwinsiby.medium.com/performing-crud-operations-in-postgresql-with-go-42657761
 
    
 
