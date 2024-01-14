@@ -23,9 +23,27 @@ This project is meticulously tailored for a diverse audience, providing a user-f
 
 ![image](https://github.com/mukanovaamina/go2/assets/130199707/f961a9fa-ec1e-4f2e-8bea-00d929db6c1d)
 
+# Step-by-step instructions for launching the application
+## 1. Start PostgreSQL:
+Make sure that your PostgreSQL server is running. If necessary, run it.
 
-а здесь инструкция по запуску
+## 2. Apply migrations:
+__migrate -path db/migrations -database "postgres://postgres:Aruzhan7@localhost:5432/amina?sslmode=disable" up__
 
+## 3. Launch your application:
+__go run main.go__
+
+## 4. Open the web page:
+Open your web browser and go to http://localhost:8080 . You should see a web page with your task list.
+
+## 5. Add a task:
+On the web page, use the form to add a new task.
+
+## 6. Review the tasks:
+View the list of tasks on the web page.
+
+## 7. Perform CRUD operations:
+Try to perform various CRUD operations (Create, Read, Update, Delete) with tasks on your web page.
 
 
 
