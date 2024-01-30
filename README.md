@@ -45,6 +45,12 @@ View the list of tasks on the web page.
 ## 7. Perform CRUD operations:
 Try to perform various CRUD operations (Create, Read, Update, Delete) with tasks on your web page.
 
+## 8. Test filtering, sorting and pagination:
+Select certain variant in the web page.
+
+## 9. Check structured logging and rate limiting:
+Add more tasks to see the result.
+
 
 
 
@@ -53,6 +59,10 @@ Try to perform various CRUD operations (Create, Read, Update, Delete) with tasks
    http://go-database-sql.org/
    
    https://edwinsiby.medium.com/performing-crud-operations-in-postgresql-with-go-42657761
+
+   https://medium.easyread.co/how-to-do-pagination-in-postgres-with-golang-in-4-common-ways-12365b9fb528
+
+   https://pkg.go.dev/golang.org/x/time/rate
 
    
 
