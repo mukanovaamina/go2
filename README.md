@@ -21,7 +21,7 @@ This project is meticulously tailored for a diverse audience, providing a user-f
 *Aruzhan Yeleukeshova* and *Amina Mukanova* from *SE-2215* infused their collaborative brilliance into the very fabric of this project, blending creativity with technical prowess.
 
 
-![image](https://github.com/mukanovaamina/go2/assets/130199707/f961a9fa-ec1e-4f2e-8bea-00d929db6c1d)
+![image](https://github.com/mukanovaamina/draft/blob/36e7ea489cd124cc9b3413f169740e717b489aeb/scr.jpg)
 
 # Step-by-step instructions for launching the application
 ## 1. Start PostgreSQL:
